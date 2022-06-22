@@ -167,7 +167,7 @@ first_digit_data <- BenfordStats::first_digit(results)
 expected <- round(BenfordStats::prob_first_digit(1:9), 2)
 ```
 
-Finally, we are going to
+Finally, we are going to plot the results:
 
 ``` r
 plot <- barplot(
