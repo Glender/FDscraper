@@ -2,7 +2,8 @@
 % Please edit documentation in R/scrape_fd_urls.R
 \name{scrape_fd_urls}
 \alias{scrape_fd_urls}
-\title{Wrapper around FD url to scrape multiple websites at once}
+\title{Wrapper around \code{scrape_fd_url} to find balance sheet data from
+specific companies.}
 \usage{
 scrape_fd_urls(urls)
 }
@@ -13,5 +14,15 @@ scrape_fd_urls(urls)
 
 }
 \description{
-Wrapper around FD url to scrape multiple websites at once
+Wrapper around \code{scrape_fd_url} to find balance sheet data from
+specific companies.
+}
+\examples{
+# urls to scrape weblinks from
+urls <- c(
+"https://beurs.fd.nl/analyse/amsterdam/aex/",
+"https://beurs.fd.nl/analyse/amsterdam/midkap/"
+)
+websites <- scrape_fd_urls(urls)
+print(websites)
 }

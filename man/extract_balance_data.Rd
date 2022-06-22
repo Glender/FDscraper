@@ -2,16 +2,25 @@
 % Please edit documentation in R/extract_balance_data.R
 \name{extract_balance_data}
 \alias{extract_balance_data}
-\title{Extract Balance sheet data from FD website.}
+\title{Extract Balance sheet data from the FD website.}
 \usage{
-extract_balance_data(website)
+extract_balance_data(website, remove_chars = c("", "--", "0"), dec = ",")
 }
 \arguments{
-\item{website}{character}
+\item{website}{character. url.}
+
+\item{remove_chars}{character. What characters do you want to
+remove from the balance sheet data. Default: c("", "--", "0").}
+
+\item{dec}{character. Default: ','}
 }
 \value{
 data.frame
 }
 \description{
-Extract Balance sheet data from FD website.
+Extract Balance sheet data from the FD website.
+}
+\examples{
+data <- extract_balance_data("https://beurs.fd.nl/noteringen/11755/ahold-delhaize/kerncijfers")
+print(data)
 }

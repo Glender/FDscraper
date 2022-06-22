@@ -2,7 +2,8 @@
 % Please edit documentation in R/clean_balance_data.R
 \name{clean_balance_data}
 \alias{clean_balance_data}
-\title{After extracting balance data, clean it by removing redundant data}
+\title{After extracting balance data, clean it by removing redundant data
+and extract only the numbers from it.}
 \usage{
 clean_balance_data(data, remove_words = "Totaal|Balans|Kas")
 }
@@ -16,4 +17,5 @@ clean_balance_data(data, remove_words = "Totaal|Balans|Kas")
 }
 \description{
 After extracting balance data, clean it by removing redundant data
+and extract only the numbers from it.
 }

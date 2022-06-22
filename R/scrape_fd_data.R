@@ -1,4 +1,4 @@
-#' Scrape Balance Sheet data from multiple FD websites
+#' Scrape Balance Sheet data from multiple FD websites.
 #'
 #' @param websites Character. Vector of urls.
 #'
@@ -8,13 +8,13 @@ scrape_fd_data <- function(websites){
 
   # empty container to store the results
   results <- vector("double", 0L)
-
   for (website in websites) {
 
     # extract data from each website
     data <- extract_balance_data(website)
 
-    # remove redundant data
+    # remove redundant data and
+    # extract only numbers from it
     data <- clean_balance_data(data)
 
     # merge the data together

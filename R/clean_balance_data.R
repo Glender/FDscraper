@@ -1,4 +1,5 @@
 #' After extracting balance data, clean it by removing redundant data
+#' and extract only the numbers from it.
 #'
 #' @param data data.frame
 #' @param remove_words character
